@@ -5,7 +5,7 @@ export default function TransactionForm() {
     const [from, setFrom]=useState('USD')
     const [to, setTo]=useState('CAD')
     const [fcur, setFcur] = useState('')
-    const [tcur, setTcur] = useState('')
+    const [tcur, setTcur] = useState(0)
     const [when, setWhen] = useState('')
     const [err, setErr] = useState(null)
     const [conversion, setConversion] = useState(null)
@@ -17,7 +17,8 @@ export default function TransactionForm() {
         if(!json.data){
             setErr('Could not Fetch Data')
         }
-          setConversion(json.data)
+          setConversion(parseFloat(json['data'][to]['value']))
+          setTcur(parseFloat(fcur)*conversion)
     }
   return (
     <div>
@@ -78,6 +79,7 @@ export default function TransactionForm() {
             />
         </label>
         <button className="btn-primary">Check</button>
+        {err && <div className="error">{err}</div>}
       </form>
     </div>
   )
