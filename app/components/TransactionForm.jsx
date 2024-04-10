@@ -4,11 +4,11 @@ import { useEffect } from "react"
 export default function TransactionForm() {
     const [from, setFrom]=useState('USD')
     const [to, setTo]=useState('CAD')
-    const [fcur, setFcur] = useState('')
-    const [tcur, setTcur] = useState('')
+    const [fcur, setFcur] = useState(0)
+    const [tcur, setTcur] = useState(0)
     const [when, setWhen] = useState('')
     const [err, setErr] = useState(null)
-    const [conversion, setConversion] = useState(null)
+    const [conversion, setConversion] = useState(1)
     const handleSubmit = async (e) => {
         e.preventDefault()
       console.log(when, to, from)
@@ -22,7 +22,7 @@ export default function TransactionForm() {
         }
     }
     useEffect(()=>{
-        setTcur(parseFloat(fcur)*conversion)
+        setTcur(fcur*conversion)
     },[fcur])
   return (
     <div>
