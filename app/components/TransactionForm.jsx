@@ -11,14 +11,15 @@ export default function TransactionForm() {
     const [conversion, setConversion] = useState(null)
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const res = await fetch('/api/stocks')
-        const json = await res.json()
-        if(json.error){
-            console.log(json.error.message)
-            setErr(json.error.message)
-        } else {
-            setConversion(json.data)
-        }
+      console.log(when)
+      const res = await fetch(`/api/exchange/${from}/${to}/${when}`)
+      const json = await res.json()
+      if(json.error){
+          console.log(json.error.message)
+          setErr(json.error.message)
+      } else {
+          setConversion(json.data)
+      }
     }
   return (
     <div>
@@ -40,7 +41,7 @@ export default function TransactionForm() {
             <span>
                 Starting Amount:
             </span>
-            <input type="number" className="rounded-lg"
+            <input type="number" required className="rounded-lg"
             onChange={(e) => setFcur(e.target.value)}
             value={fcur}
             />
@@ -63,7 +64,7 @@ export default function TransactionForm() {
             <span>
                 Exchange Amount:
             </span>
-            <input type="number" className="rounded-lg"
+            <input type="number"  className="rounded-lg"
             onChange={(e) => setTcur(e.target.value)}
             value={tcur}
             />
@@ -73,7 +74,7 @@ export default function TransactionForm() {
             <span>
                 When?
             </span>
-            <input type="data" className="rounded-lg" 
+            <input type="date" required className="rounded-lg" 
             onChange={(e) => setWhen(e.target.value)}
             value={when}
             />
