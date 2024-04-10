@@ -1,3 +1,4 @@
+"use client"
 import TransactionForm from "../components/TransactionForm";
 
 

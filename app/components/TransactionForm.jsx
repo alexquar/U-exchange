@@ -11,15 +11,10 @@ export default function TransactionForm() {
     const [conversion, setConversion] = useState(null)
     const handleSubmit = async (e) => {
         e.preventDefault()
-      console.log(when)
       const res = await fetch(`/api/exchange/${from}/${to}/${when}`)
+      console.log(res)
       const json = await res.json()
-      if(json.error){
-          console.log(json.error.message)
-          setErr(json.error.message)
-      } else {
-          setConversion(json.data)
-      }
+        console.log(json.data)
     }
   return (
     <div>
