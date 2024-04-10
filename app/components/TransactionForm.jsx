@@ -40,7 +40,7 @@ export default function TransactionForm() {
             <span>
                 Starting Amount:
             </span>
-            <input type="number" required className="rounded-lg"
+            <input type="number" className="rounded-lg"
             onChange={(e) => setFcur(e.target.value)}
             value={fcur}
             />
@@ -63,7 +63,7 @@ export default function TransactionForm() {
             <span>
                 Exchange Amount:
             </span>
-            <input type="number"  className="rounded-lg"
+            <input type="number"  disabled className="rounded-lg bg-white"
             onChange={(e) => setTcur(e.target.value)}
             value={tcur}
             />
