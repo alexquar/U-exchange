@@ -7,9 +7,18 @@ export default function TransactionForm() {
     const [fcur, setFcur] = useState('')
     const [tcur, setTcur] = useState('')
     const [when, setWhen] = useState('')
-    const handleSubmit = (e) => {
+    const [err, setErr] = useState(null)
+    const [conversion, setConversion] = useState(null)
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        //handle
+        const res = await fetch('/api/stocks')
+        const json = await res.json()
+        if(json.error){
+            console.log(json.error.message)
+            setErr(json.error.message)
+        } else {
+            setConversion(json.data)
+        }
     }
   return (
     <div>
