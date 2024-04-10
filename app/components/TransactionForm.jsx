@@ -13,7 +13,7 @@ export default function TransactionForm() {
     }
   return (
     <div>
-      <form onSubmit={handleSubmit} className="flex flex-col my-5 w-full">
+      <form onSubmit={handleSubmit} className="flex flex-col my-10 p-3 w-full">
         <div className="grid grid-cols-2 gap-3">
         <label className="mx-5">
             <span>
