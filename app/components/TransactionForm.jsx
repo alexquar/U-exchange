@@ -8,38 +8,44 @@ export default function TransactionForm() {
     <div>
       <form className="flex flex-col my-5 w-full">
         <div className="grid grid-cols-2 gap-3">
-        <label>
+        <label className="mx-5">
             <span>
                 Starting Currency:
             </span>
-            <input type="text" />
+            <select className="rounded-lg">
+                <option value="">USD</option>
+                <option value="">CAD</option>
+            </select>
         </label>
-        <label >
+        <label className="mx-5" >
             <span>
                 Starting Amount:
             </span>
-            <input type="number" />
+            <input type="number" className="rounded-lg"/>
         </label>
         </div>
         <div className="grid grid-cols-2 gap-3" >
-        <label>
+        <label className="mx-5">
             <span>
                 Exchange Currency:
             </span>
-            <input type="text" />
+            <select className="rounded-lg"> 
+            <option value="">CAD</option>
+                <option value="">USD</option>
+            </select>
         </label>
-        <label>
+        <label className="mx-5">
             <span>
                 Exchange Amount:
             </span>
-            <input type="number" />
+            <input type="number" className="rounded-lg"/>
         </label>
         </div>
-        <label className="w-1/2 mx-auto">
+        <label className="w-1/2 mx-auto ">
             <span>
                 When?
             </span>
-            <input type="data" />
+            <input type="data" className="rounded-lg" />
         </label>
         <button className="btn-primary">Check</button>
       </form>
