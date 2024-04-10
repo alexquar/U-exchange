@@ -2,8 +2,11 @@
 
 export default function Contact() {
   return (
-    <div>
-      contact
-    </div>
+    <main>
+    <h1 className='text-center pt-5 mt-5 text-2xl'>Contact the Owners</h1>
+    <h3 className='text-center pt-5 mt-5 text-xl'>aqbusiness9@gmail.com</h3>
+        <p className="py-5 text-basic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique minus possimus itaque, accusamus optio, adipisci sequi harum pariatur consequatur quidem quam accusantium molestiae. Sit distinctio dolore doloribus. Debitis, quaerat? </p>  
+        <p className="py-5 text-basic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique minus possimus itaque, accusamus optio, adipisci sequi harum pariatur consequatur quidem quam accusantium molestiae. Sit distinctio dolore doloribus. Debitis, quaerat? </p>  <p className="py-5 text-basic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique minus possimus itaque, accusamus optio, adipisci sequi harum pariatur consequatur quidem quam accusantium molestiae. Sit distinctio dolore doloribus. Debitis, quaerat? </p>  <p className="py-5 text-basic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique minus possimus itaque, accusamus optio, adipisci sequi harum pariatur consequatur quidem quam accusantium molestiae. Sit distinctio dolore doloribus. Debitis, quaerat? </p>  <p className="py-5 text-basic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique minus possimus itaque, accusamus optio, adipisci sequi harum pariatur consequatur quidem quam accusantium molestiae. Sit distinctio dolore doloribus. Debitis, quaerat? </p>  <p className="py-5 text-basic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique minus possimus itaque, accusamus optio, adipisci sequi harum pariatur consequatur quidem quam accusantium molestiae. Sit distinctio dolore doloribus. Debitis, quaerat? </p>  <p className="py-5 text-basic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique minus possimus itaque, accusamus optio, adipisci sequi harum pariatur consequatur quidem quam accusantium molestiae. Sit distinctio dolore doloribus. Debitis, quaerat? </p>  <p className="py-5 text-basic">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut similique minus possimus itaque, accusamus optio, adipisci sequi harum pariatur consequatur quidem quam accusantium molestiae. Sit distinctio dolore doloribus. Debitis, quaerat? </p>  
+    </main>
   )
 }
