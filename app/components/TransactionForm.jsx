@@ -82,7 +82,7 @@ export default function TransactionForm() {
             value={when}
             />
         </label>
-        <button className="btn-primary">Check</button>
+        <button className="btn-primary px-5 text-xl my-3">Check</button>
         {err && <div className="error">{err}</div>}
       </form>
     </div>
