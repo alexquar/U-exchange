@@ -1,11 +1,11 @@
 "use client"
 import { useState } from "react"
-
+import { useEffect } from "react"
 export default function TransactionForm() {
     const [from, setFrom]=useState('USD')
     const [to, setTo]=useState('CAD')
     const [fcur, setFcur] = useState('')
-    const [tcur, setTcur] = useState(0)
+    const [tcur, setTcur] = useState('')
     const [when, setWhen] = useState('')
     const [err, setErr] = useState(null)
     const [conversion, setConversion] = useState(null)
@@ -16,10 +16,14 @@ export default function TransactionForm() {
       const json = await res.json()
         if(!json.data){
             setErr('Could not Fetch Data')
-        }
+        } else {
           setConversion(parseFloat(json['data'][to]['value']))
           setTcur(parseFloat(fcur)*conversion)
+        }
     }
+    useEffect(()=>{
+        setTcur(parseFloat(fcur)*conversion)
+    },[fcur])
   return (
     <div>
       <form onSubmit={handleSubmit} className="flex flex-col my-10 p-3 w-full">
