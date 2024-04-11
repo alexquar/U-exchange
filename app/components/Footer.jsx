@@ -4,7 +4,7 @@ export default function Footer() {
   return (
 <footer class="bg-white fixed w-full bottom-0 left-0 rounded-lg shadow mt-4 p-3">
     <div class="w-full p-4 flex">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 mr-auto">© 2024 U Exchange™. All Rights Reserved.
+      <span class="text-md text-primary sm:text-center dark:text-gray-400 mr-auto">© 2024 U Exchange™. All Rights Reserved.
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>

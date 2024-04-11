@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 export default function TransactionForm() {
     const [from, setFrom]=useState('USD')
-    const [to, setTo]=useState('CAD')
+    const [to, setTo]=useState('USD')
     const [fcur, setFcur] = useState(0)
     const [tcur, setTcur] = useState(0)
     const [when, setWhen] = useState('')
