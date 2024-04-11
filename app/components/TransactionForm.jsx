@@ -38,6 +38,8 @@ export default function TransactionForm() {
             >
                 <option value="USD">USD</option>
                 <option value="CAD">CAD</option>
+                
+
             </select>
         </label>
         <label className="mx-5" >
